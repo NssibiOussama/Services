@@ -1,0 +1,57 @@
+<div class="search-container">
+    <div class="search-bar">
+
+        <input class="inputtext" type="text" pInputText placeholder="Rechercher par offre" [(ngModel)]="keywords"
+            (ngModelChange)="fetchCvData()" />
+        <p-button icon="pi pi-search" [rounded]="true" severity="success" />
+
+    </div>
+
+
+</div>
+
+<p-table [value]="pagedCvDataList" [scrollable]="true" scrollHeight="582px" [resizableColumns]="false"
+    styleClass="p-datatable-gridlines custom-table" [tableStyle]="{'min-width': '50rem', 'border': '1px solid #ccc'}">
+
+    <ng-template pTemplate="header">
+        <tr>
+            <th style="background-color: #f0f0f0; color: #333; text-align: center;">CV Name</th>
+            <th style="background-color: #f0f0f0; color: #333; text-align: center;">Computer Skills</th>
+            <th style="background-color: #f0f0f0; color: #333; text-align: center;">Soft Skills</th>
+            <th style="background-color: #f0f0f0; color: #333; text-align: center;">Language Skills</th>
+            <th style="background-color: #f0f0f0; color: #333; text-align: center;">Other Skills</th>
+        </tr>
+
+    </ng-template>
+
+    <ng-template pTemplate="body" let-cvData>
+        <tr class="tags" *ngFor="let cvData of pagedCvDataList">
+            <td [class]="getcolor()" style="font-size: larger; font-family: 'Times New Roman', Times, serif;">{{
+                cvData.key.split('.')[0] }}</td>
+            <td>
+                <ul>
+                    <li *ngFor="let skill of cvData.value.computerSkills" [class]="getcolor()">{{ skill.skill }}</li>
+                </ul>
+            </td>
+            <td>
+                <ul>
+                    <li *ngFor="let skill of cvData.value.softskills" [class]="getcolor()">{{ skill.skillDescription }}
+                    </li>
+                </ul>
+            </td>
+            <td>
+                <ul>
+                    <li *ngFor="let skill of cvData.value.languageskills" [class]="getcolor()">{{ skill.skillDescription
+                        }}</li>
+                </ul>
+            </td>
+            <td>
+                <ul>
+                    <li *ngFor="let skill of cvData.value.otherSkills" [class]="getcolor()">{{ skill.skill }}</li>
+                </ul>
+            </td>
+        </tr>
+    </ng-template>
+</p-table>
+<p-paginator [rows]="pageSize" [totalRecords]="cvDataList.length" (onPageChange)="onPageChange($event)"
+    class="custom-paginator"></p-paginator>

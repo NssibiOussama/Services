@@ -1,0 +1,124 @@
+
+
+
+.search-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 12px;
+    border: 1px solid #ccc;
+    border-radius: 50px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.9);
+    margin: 0 auto 1cm; /* Centrage horizontal et espace de 1cm en dessous */
+    width: 50%; /* Ou toute autre largeur désirée */
+
+
+  }
+
+  .search-bar {
+    display: flex;
+    align-items: center;
+    width: 100%;
+
+    .inputtext{
+
+        width: 100%;
+        margin-left: 10px;
+		margin-right: 10px;
+
+    }
+  }
+
+
+.tags li {
+	display: inline-block;
+	height:24px;
+	line-height:23px;
+	position:relative;
+	margin: 0 12px 8px 0;
+	padding: 0 12px 0 10px;
+	background: #777;
+	-moz-border-radius-bottomleft: 5px;
+	-webkit-border-bottom-left-radius: 5px;
+	border-bottom-left-radius: 5px;
+	-moz-border-radius-topleft: 5px;
+	-webkit-border-top-left-radius: 5px;
+	border-top-left-radius: 5px;
+	box-shadow: 0 1px 2px rgba(0,0,0,0.2);
+	color: #fff;
+	font-size:12px;
+	font-family: "Lucida Grande","Lucida Sans Unicode",Verdana,sans-serif;
+	text-decoration: none;
+	text-shadow: 0 1px 2px rgba(0,0,0,0.2);
+	font-weight: bold;
+	}
+
+
+
+.tags li.color1 {background: #f58220;}
+.tags li.color1:after {border-color: transparent transparent transparent #f58220}
+.tags li.color2 {background: #97c224;}
+.tags li.color2:after {border-color: transparent transparent transparent #2439c2}
+.tags li.color3 {background: #de3f3e;}
+.tags li.color3:after {border-color: transparent transparent transparent #de3f3e}
+.tags li.color4 {background: #ec008c;}
+.tags li.color4:after {border-color: transparent transparent transparent #b100ec}
+.tags li.color5 {background: #00a6df;}
+.tags li.color5:after {border-color: transparent transparent transparent #00a6df}
+
+.tags li.color6 {background: #13df00;}
+.tags li.color6:after {border-color: transparent transparent transparent #13df00}
+
+.tags li.color7 {background: #203606;}
+.tags li.color7:after {border-color: transparent transparent transparent #062a36}
+
+.tags li.color8 {background: #af0b26;}
+.tags li.color8:after {border-color: transparent transparent transparent #af0b26}
+
+.tags li:hover {background:#222 !important; cursor: pointer;}
+.tags li:hover:after {border-color:transparent transparent transparent #222!important}
+
+.small li {
+	height: 21px;
+	line-height: 21px;
+	float: none;
+	font-size: 11px;
+	}
+
+.small li:before {
+    right: 0;
+    top: 8px;
+    border-width: 10px 0 10px 10px;
+	}
+
+.small li:after {
+	right: -11px;
+	top: 0;
+	border-width: 11px 0 11px 11px;
+	}
+
+    .custom-paginator .ui-paginator {
+        font-size: 1.5em;
+    }
+
+    .custom-paginator .ui-paginator-page,
+    .custom-paginator .ui-paginator-next,
+    .custom-paginator .ui-paginator-prev {
+        width: 50px;
+        height: 50px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        margin: 0 5px;
+    }
+
+    .custom-paginator .ui-paginator-page {
+        padding: 5px;
+    }
+
+    .custom-paginator .ui-paginator-element {
+        line-height: 50px;
+    }
+
+
+
